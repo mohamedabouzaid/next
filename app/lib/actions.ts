@@ -26,7 +26,7 @@ export async function createInvoice(formData: FormData) {
   const amountInCents = amount * 100;
   const date = new Date().toISOString().split("T")[0];
   try{
-    await sql` insert into invoices (customer_id,amount,status,date) values (${customerId},${amount},${status},${date})`;
+    await sql` insert into invoices (customer_id,amount,status,date) values (${customerId},${amountInCents},${status},${date})`;
   }catch(error){ 
     return{
         message:'Database Error: Failed to Create Invoice'

@@ -7,6 +7,7 @@ import { lusitana } from "@/app/ui/fonts";
 import Image from "next/image";
 
 export default function Page() {
+  //throw new Error("test the error boundry")
   return (
     <main className="flex min-h-screen flex-col p-6">
       <InvoiceStatus status="test" />
