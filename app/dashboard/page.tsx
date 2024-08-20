@@ -14,6 +14,9 @@ export default async function Page() {
     totalPaidInvoices,
     totalPendingInvoices,
   } = await fetchCardData();
+
+  //throw new Error("test the error boundry")
+
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
